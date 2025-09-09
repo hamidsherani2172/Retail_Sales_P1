@@ -18,27 +18,23 @@ This project is designed to demonstrate SQL skills and techniques typically used
 ## Project Structure
 
 ### 1. Database Setup
-
-- **Database Creation**: The project starts by creating a database named `p1_retail_db`.
-- **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
-
 ```sql
-CREATE DATABASE p1_retail_db;
-
-CREATE TABLE retail_sales
-(
-    transactions_id INT PRIMARY KEY,
-    sale_date DATE,	
-    sale_time TIME,
-    customer_id INT,	
-    gender VARCHAR(10),
-    age INT,
-    category VARCHAR(35),
-    quantity INT,
-    price_per_unit FLOAT,	
-    cogs FLOAT,
-    total_sale FLOAT
-);
+--create table
+drop table if exists retail_sales;
+create table retail_sales
+		(			
+			transactions_id	int primary key,
+			sale_date date,
+			sale_time time,
+			customer_id	int,
+			gender varchar(15),
+			age	int,
+			category varchar(15),	
+			quantiy	int,
+			price_per_unit float,	
+			cogs float,
+			total_sale float
+		);
 ```
 
 ### 2. Data Exploration & Cleaning
@@ -225,3 +221,4 @@ For more content on SQL, data analysis, and other data-related topics, make sure
 - **Discord**: [Join our community to learn and grow together](https://discord.gg/36h5f2Z5PK)
 
 Thank you for your support, and I look forward to connecting with you!
+
